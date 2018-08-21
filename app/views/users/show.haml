@@ -1,0 +1,4 @@
+%h1 Punktestand
+%h2= @points
+
+= link_to 'next question', "/games/#{@character}/questions_and_answers/#{@index}/points/#{@points}/time/#{@time}", id: 'js-next-question'

@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SpeechRecognition
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all' 
+    %link{:href => "https://fonts.googleapis.com/css?family=Arimo", :rel => "stylesheet"}/
+    = javascript_include_tag 'application'
+  %body.background
+    - if flash[:success]
+      .notice= flash[:success]
+    - if flash[:failure]
+      .notice= flash[:failure]
+    = yield

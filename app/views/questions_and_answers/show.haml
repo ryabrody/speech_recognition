@@ -1,0 +1,7 @@
+.js-recognition
+  %h1= @question_and_answers.question
+  %p#js-recognition-status
+  = form_for :user, html: { id: "js-submit-answer" }  do |f|
+    = f.text_field :answer
+    = f.text_field :points, value: @points
+    = f.submit
